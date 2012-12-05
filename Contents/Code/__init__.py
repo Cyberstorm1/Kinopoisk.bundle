@@ -1,7 +1,8 @@
-import urllib2, urllib, string, random, types, unicodedata, re, datetime, time
+import unicodedata, datetime
 
-KINOPOISK_OPEN_API_URL = ' http://www.kinopoisk.ru/export/export.php?encoding=utf8&search=%s'
+KINOPOISK_OPEN_API_URL = 'http://www.kinopoisk.ru/export/export.php?encoding=utf8&search=%s'
 KINOPOISK_META_URL = 'http://www.kinopoisk.ru/export/export.php?encoding=utf8&id_film=%s'
+RE_YEAR = Regex('([1-2][0-9]{3})')
 
 def Start():
 #	HTTP.CacheTime = CACHE_1HOUR * 4
@@ -24,7 +25,7 @@ class KinoPoiskAgent(Agent.Movies):
 		media_name = name.lower()
 
 		if media.year is None :
-			yearMatch = re.search('([1-2][0-9]{3})', media_name)
+			yearMatch = RE_YEAR.search(media_name)
 			if yearMatch :
 				yearStr = yearMatch.group(1)
 				yearInt = int(yearStr)
@@ -32,7 +33,7 @@ class KinoPoiskAgent(Agent.Movies):
 					media.year = yearInt
 					media_name = media_name.replace(yearStr, '')	
 
-		url = KINOPOISK_OPEN_API_URL %(urllib.quote(media_name))	# URL for movie name search
+		url = KINOPOISK_OPEN_API_URL % (String.Quote(media_name, usePlus=False))	# URL for movie name search
 		xml = self.GetFixedXML(url)                                                           # to get XML for search result
 		items = xml.xpath('//film')
 		score = 99
