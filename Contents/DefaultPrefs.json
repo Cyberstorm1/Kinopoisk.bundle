@@ -1,0 +1,159 @@
+[
+  {
+    "id": "search.parse_filename",
+    "label": "Поиск. Альтернативный разбор файла",
+    "type": "bool",
+    "default": "true"
+  },
+  {
+    "id": "search.use_digits",
+    "label": "Поиск. Транслировать цифры в текст",
+    "type": "bool",
+    "default": "true"
+  },
+  {
+    "id": "search.use_translit",
+    "label": "Поиск. Транслит названия",
+    "type": "bool",
+    "default": "true"
+  },
+  {
+    "id": "search.trust_kp",
+    "label": "Поиск. Учитывать порядок результатов Кинопоиска",
+    "type": "bool",
+    "default": "true"
+  },
+  {
+    "id": "search.beta",
+    "label": "Поиск. Использовать beta-весрию сайта",
+    "type": "enum",
+    "values": ["Вместо основного","Совместно с основным","Не использовать"],
+    "default": "Не использовать"
+  },
+  {
+    "id": "data.rating_desc",
+    "label": "Данные. Добавить рейтинг к описанию",
+    "type": "bool",
+    "default": "true"
+  },
+  {
+    "id": "data.actors_eng",
+    "label": "Данные. Имена актеров на англ. языке",
+    "type": "bool",
+    "default": "false"
+  },
+  {
+    "id": "data.mini_series",
+    "label": "Данные. Мини-сериалы как фильм",
+    "type": "bool",
+    "default": "false"
+  },
+  {
+    "id": "data.collections",
+    "label": "Данные. Создавать коллекции",
+    "type": "bool",
+    "default": "false"
+  },
+  {
+    "id": "image.order.kp",
+    "label": "Фото. Порядок загрузки. Кинопоиск: ",
+    "type": "enum",
+    "values": ["0","1","2","3"],
+    "default": "3"
+  },
+  {
+    "id": "image.kp.main_poster",
+    "label": "Фото. Кинопоиск. Использовать основной постер",
+    "type": "bool",
+    "default": "false"
+  },
+  {
+    "id": "image.kp.max_posters",
+    "label": "Фото. Кинопоиск. Максимальное кол-во постеров: ",
+    "type": "enum",
+    "values": ["1","2","3","5","10"],
+    "default": "2"
+  },
+  {
+    "id": "image.kp.max_backdrops",
+    "label": "Фото. Кинопоиск. Максимальное кол-во фонов: ",
+    "type": "enum",
+    "values": ["1","2","3","5","10"],
+    "default": "2"
+  },
+  {
+    "id": "image.order.tmdb",
+    "label": "Фото. Порядок загрузки. The MovieDB: ",
+    "type": "enum",
+    "values": ["0","1","2","3"],
+    "default": "2"
+  },
+  {
+    "id": "image.tmdb.prefer_local_art",
+    "label": "Фото. Предпочитать локализованный арт",
+    "type": "bool",
+    "default": "true"
+  },
+  {
+    "id": "image.tmdb.max_posters",
+    "label": "Фото. The MovieDB. Максимальное кол-во постеров: ",
+    "type": "enum",
+    "values": ["1","2","3","5","10"],
+    "default": "2"
+  },
+  {
+    "id": "image.tmdb.max_backdrops",
+    "label": "Фото. The MovieDB. Максимальное кол-во фонов: ",
+    "type": "enum",
+    "values": ["1","2","3","5","10"],
+    "default": "2"
+  },
+  {
+    "id": "image.order.itunes",
+    "label": "Фото. Порядок загрузки. iTunes: ",
+    "type": "enum",
+    "values": ["0","1","2","3"],
+    "default": "1"
+  },
+  {
+    "id": "image.itunes.prefer_local_art",
+    "label": "Фото. iTunes. Предпочитать локализованный арт",
+    "type": "bool",
+    "default": "true"
+  },
+
+  {
+    "id": "video.order.kp",
+    "label": "Видео. Порядок загрузки. Кинопоиск: ",
+    "type": "enum",
+    "values": ["0","1","2"],
+    "default": "1"
+  },
+  {
+    "id": "video.kp.max",
+    "label": "Видео. Кинопоиск. Максимальное кол-во трейлеров: ",
+    "type": "enum",
+    "values": ["1","2","3","5","10"],
+    "default": "1"
+  },
+  {
+    "id": "video.order.tmdb",
+    "label": "Видео. Порядок загрузки. The MovieDB: ",
+    "type": "enum",
+    "values": ["0","1","2"],
+    "default": "2"
+  },
+  {
+    "id": "video.tmdb.max",
+    "label": "Видео. The MovieDB. Максимальное кол-во трейлеров: ",
+    "type": "enum",
+    "values": ["1","2","3","5","10"],
+    "default": "1"
+  },
+  {
+    "id": "video.tmdb.redband",
+    "label": "Видео. The MovieDB. Загружать 'Redband' трейлеры: ",
+    "type": "bool",
+    "default": "1"
+  }
+]
